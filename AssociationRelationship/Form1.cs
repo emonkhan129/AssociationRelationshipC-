@@ -13,7 +13,6 @@ namespace AssociationRelationship
     public partial class Form1 : Form
     {
         private Customer customer1;
-        private Account anAccount;
         public Form1()
         {
             InitializeComponent();
@@ -21,7 +20,7 @@ namespace AssociationRelationship
 
         private void saveButton_Click(object sender, EventArgs e)
         {
-            anAccount = new Account();
+            Account anAccount = new Account();
             anAccount.AccountNumber = accountNumberEntryTextBox.Text;
             anAccount.OpeningDate = openingDateEntryTextBox.Text;
 
@@ -53,7 +52,8 @@ namespace AssociationRelationship
             customerEmailShowTextBox.Text = email ;
             accountNumberShowTextBox.Text =  accountNumber ;
             openingDateShowTextBox.Text = openingDate ;
-            balanceShowTextBox.Text = balance ; 
+            balanceShowTextBox.Text = balance ;
+           
         }
     }
 }
